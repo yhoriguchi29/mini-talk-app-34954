@@ -46,6 +46,10 @@ Rails.application.configure do
   config.action_cable.url = "wss://mini-talk-app-34954.herokuapp.com/cable" 
   config.action_cable.allowed_request_origins = ['https://mini-talk-app-34954.herokuapp.com', 'http://mini-talk-app-34954.herokuapp.com']
 
+  ActionCable.server.config.disable_request_forgery_protection = true
+  config.action_cable.url = "ws://30.75.80.42/cable" 
+  config.action_cable.allowed_request_origins = ['http://30.75.80.42']
+
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
